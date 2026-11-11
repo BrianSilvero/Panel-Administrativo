@@ -1,0 +1,53 @@
+/* Tokens de diseño · copiados tal cual del brief (sección 3).
+   Lo de abajo de "Derivados" sale de las tablas del brief, pasado a rem
+   para que todo escale con el tamaño de letra de Ajustes (1rem = --fs-base). */
+:root{
+  /* Superficies */
+  --bg:#F4F2EE;          /* fondo general */
+  --surface:#FFFFFF;     /* tarjetas */
+  --sidebar:#FBFAF8;     /* menú lateral */
+  --border:#E4E0D8;      /* bordes de tarjetas */
+  --divider:#ECE9E3;     /* separadores internos */
+  --hover:#ECE9E3;
+  /* Texto */
+  --text:#26231F;
+  --text-2:#3A362F;      /* secundario fuerte */
+  --muted:#655F57;       /* ayudas y subtítulos (contraste AA sobre blanco y crema) */
+  /* Acento */
+  --accent:#2F5D53;      /* botón principal */
+  --accent-hover:#264C44;
+  --accent-soft:#E3ECE8; /* ítem de menú activo, etiqueta "confirmado/listo" */
+  --accent-ink:#1F433B;  /* texto sobre accent-soft */
+  /* Estados */
+  --ok:#3E8E5A;          /* punto "abierto", interruptor encendido */
+  --off:#B9B2A7;         /* interruptor apagado */
+  --warn-soft:#F6EBD9; --warn-ink:#6B4A12;   /* "por confirmar" */
+  --info-soft:#E6EEF6; --info-ink:#244A6B;   /* "en preparación" */
+  --danger-ink:#8A3B2E;                       /* "sin stock" */
+  /* Agregados para el cierre de emergencia (no estaban en el brief) */
+  --danger-hover:#73301F; --danger-soft:#F6E4E0; --danger-border:#E3B9AF;
+  --demo-soft:#EFE9DF; --demo-ink:#5A4A35;   /* cinta "boceto / demo" */
+  --control-border:#CFC9BF;
+  --select-soft:#F2F7F5;  /* opción marcada (días de show, tipo de cierre) */
+  /* Forma */
+  --r-sm:8px; --r:10px; --r-card:14px; --r-pill:999px;
+  --h-control:48px;      /* alto mínimo de botones y campos */
+  /* Tipografía */
+  --font:'Atkinson Hyperlegible',system-ui,sans-serif;
+  --fs-base:17px;        /* cambia con el tamaño de letra de Ajustes */
+
+  /* Derivados (px del boceto ÷ 17) */
+  --fs-h1:calc(30rem / 17);
+  --fs-h2:calc(21rem / 17);
+  --fs-big:calc(36rem / 17);
+  --fs-estado:calc(26rem / 17);
+  --fs-hora:calc(22rem / 17);
+  --fs-code:calc(20rem / 17);
+  --fs-help:calc(15rem / 17);
+  --fs-label:calc(14rem / 17);
+  --fs-brand:calc(21rem / 17);
+
+  /* Movimiento: corto y firme (panel de trabajo, no marketing) */
+  --ease-out:cubic-bezier(0.23, 1, 0.32, 1);
+  --press:160ms;
+}

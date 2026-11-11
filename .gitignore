@@ -1,0 +1,14 @@
+.env
+.env.*
+*.key
+*.pem
+node_modules/
+.vercel/
+.wrangler/
+.DS_Store
+Thumbs.db
+
+# No se publican: documentación interna, borradores sin aprobar y ajustes del editor
+docs/
+borradores/
+.vscode/

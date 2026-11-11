@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Ingresar · Panel Fredy</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="js/arranque.js"></script>
+<script type="module" src="js/login.js"></script>
+</head>
+<body>
+<a class="skip" href="#ingreso">Ir al contenido</a>
+<div class="login">
+  <div class="demo solo" id="cinta" hidden>Modo demo · datos de prueba</div>
+
+  <main class="login-card" id="ingreso">
+    <div>
+      <img class="login-logo" src="img/logo-fredy.jpg" alt="Fredy Puerto Madero" width="64" height="64">
+      <h1>Panel de gestión</h1>
+      <p class="muted">Entrá con tu email y tu contraseña.</p>
+    </div>
+
+    <form class="login-form" id="form-ingreso" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input class="input lg" id="email" name="email" type="email" placeholder="Ej: tunombre@ejemplo.com" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="clave">Contraseña</label>
+        <div class="input-row">
+          <input class="input lg" id="clave" name="clave" type="password" autocomplete="current-password" required>
+          <button class="btn" type="button" id="ver-clave" aria-controls="clave" aria-pressed="false">Mostrar</button>
+        </div>
+      </div>
+      <p class="help" id="aviso-ingreso" role="alert" hidden></p>
+      <button class="btn pri full lg" type="submit">Ingresar</button>
+    </form>
+
+    <p class="help">Después te pedimos un código de 6 números de tu celular (verificación en dos pasos).</p>
+    <p class="help login-sep">¿Olvidaste tu contraseña? Pedile al dueño que te mande un link para crear una nueva.</p>
+
+    <div class="login-demo" id="ingreso-demo" hidden>
+      <p class="help">Modo demo: elegí con qué rol querés probar el panel.</p>
+      <button class="btn full" type="button" data-rol="dueno">Entrar como Dueño</button>
+      <button class="btn full" type="button" data-rol="encargado">Entrar como Encargado</button>
+    </div>
+  </main>
+
+  <p class="lock">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+    Conexión cifrada · se cierra sola si no la usás
+  </p>
+</div>
+</body>
+</html>

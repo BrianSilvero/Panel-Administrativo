@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Ícono genérico del panel (sirve para cualquier cliente): un panel con menú lateral y contenido. -->
+  <rect width="64" height="64" rx="14" fill="#2F5D53"/>
+  <rect x="13" y="15" width="38" height="34" rx="5" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <path d="M26 15v34" stroke="#FFFFFF" stroke-width="4"/>
+  <path d="M32 25h12M32 32h12M32 39h8" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,67 @@
+/* Base: reset mínimo, tipografía y accesibilidad. */
+*,*::before,*::after{box-sizing:border-box}
+
+html{
+  font-size:var(--fs-base);
+  scrollbar-gutter:stable; /* el contenido no "salta" entre pantallas con y sin scroll */
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+html[data-letra="grande"]{--fs-base:20px}
+html[data-letra="muy-grande"]{--fs-base:24px}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  font-size:1rem;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,p{margin:0}
+h1{font-size:var(--fs-h1);font-weight:700;line-height:1.2}
+h2{font-size:var(--fs-h2);font-weight:700;line-height:1.25}
+/* El título recibe el foco al cambiar de sección (para lectores de pantalla); no es un
+   control, así que no lleva recuadro. */
+h1:focus,h1:focus-visible{outline:none}
+
+a{color:var(--accent)}
+@media (hover:hover) and (pointer:fine){ a:hover{color:var(--accent-ink)} }
+
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+/* Toque limpio en el celular: sin destello gris ni demora por doble toque */
+a,button,label,summary,input{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* Títulos parejos y párrafos sin una palabra sola en la última línea */
+h1,h2,h3{text-wrap:balance}
+p,.help{text-wrap:pretty}
+
+/* Foco visible en todo lo que se toca con teclado */
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.muted{color:var(--muted)}
+.help{font-size:var(--fs-help);color:var(--muted)}
+
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+}
+
+/* "Ir al contenido" */
+.skip{
+  position:absolute;left:12px;top:-100px;z-index:100;
+  background:var(--text);color:#fff;font-weight:700;
+  padding:12px 18px;border-radius:var(--r);text-decoration:none;
+}
+.skip:focus{top:12px;color:#fff}
+
+/* Movimiento reducido: se sacan los desplazamientos y escalas, pero se mantienen los
+   fundidos y cambios de color, que ayudan a entender qué cambió. */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0ms !important;scroll-behavior:auto !important}
+  .btn:active,.tab:active,.opt:active,.acceso:active,.demo-side button:active,.radio-card:active,.dia-check:active,
+  .toast,.toast.out,.dialog[open],.row.editando{transform:none !important}
+  .switch i::after{transition-duration:0ms !important}
+}

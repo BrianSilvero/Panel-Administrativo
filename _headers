@@ -1,0 +1,11 @@
+# Cabeceras de seguridad (Cloudflare Pages, igual que la web pública de Fredy).
+# Si se publica en Vercel, pasar estas mismas cabeceras a vercel.json.
+/*
+  X-Robots-Tag: noindex, nofollow
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
+  Cache-Control: no-store
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
